@@ -4,7 +4,7 @@ import { galleryItems } from "./gallery-items.js";
 console.log(galleryItems);
 
 const gallery = document.querySelector(".gallery");
-const galleryItems = iterateArrayGalleryItems(galleryItems);
+const listGalleryItems = iterateArrayGalleryItems(galleryItems);
 function iterateArrayGalleryItems(list) {
   return list
     .map(
@@ -16,7 +16,7 @@ function iterateArrayGalleryItems(list) {
     )
     .join("");
 }
-gallery.innerHTML = galleryItems;
+gallery.innerHTML = listGalleryItems;
 gallery.addEventListener("click", handleFunctionForPhotoList);
 function handleFunctionForPhotoList(evt) {
   evt.preventDefault();
